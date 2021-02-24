@@ -21,5 +21,12 @@ docker image build --tag $DOCKERID/background-generator:1.0 .
  docker container run \
  --detach \
  --publish 80:80 \
- --name (uniwueContainerName) \
+ --name (uniqueContainerName) \
  $DOCKERID/background-generator:1.0
+
+
+--shorthand:
+docker build -t tngai13/linux_bg_generator .
+docker run -d -p 80:80 --name myBgGen tngai13/linux_bg_generator
+winpty docker login
+docker push tngai13/linux_bg_generator
